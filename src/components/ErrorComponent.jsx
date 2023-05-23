@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/ErrorComponent.css";
 import { Text } from "@chakra-ui/react";
 
-const ErrorComponent = () => {
+const ErrorComponent = ({message}) => {
     return (
         <div className="error">
             {/* <script src="https://cdn.lordicon.com/bhenfmcm.js"></script> */}
@@ -17,7 +17,7 @@ const ErrorComponent = () => {
             ></lord-icon>
 
             <Text color={"red.400"} fontWeight={"800"}>
-                Something Wrong with the Exchange API
+                {message}
             </Text>
         </div>
     );

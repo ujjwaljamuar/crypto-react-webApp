@@ -3,7 +3,7 @@ import axios from "axios";
 import { Container, HStack } from "@chakra-ui/react";
 
 import { server } from "../index.js";
-import Loader from "./Loader.jsx";
+import Loader from "./LoaderFuture.jsx";
 import ExchangeCard from "./ExchangeCard.jsx";
 import ErrorComponent from "./ErrorComponent.jsx";
 
@@ -32,7 +32,7 @@ const Exchange = () => {
     if (error)
         return (
             <Container maxW={"container.xl"}>
-                <ErrorComponent />
+                <ErrorComponent message={'Something Wrong with the Exchange API'} />
             </Container>
         );
     return (
@@ -41,7 +41,7 @@ const Exchange = () => {
                 <Loader />
             ) : (
                 <>
-                    <HStack wrap={"wrap"}>
+                    <HStack wrap={"wrap"} justifyContent={'space-evenly'}>
                         {exchanges.map((i) => (
                             <ExchangeCard
                                 key={i.id}

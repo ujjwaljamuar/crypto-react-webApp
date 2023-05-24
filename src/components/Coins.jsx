@@ -63,7 +63,7 @@ const Coins = () => {
                             <Radio value="eur">€ EUR</Radio>
                         </HStack>
                     </RadioGroup>
-                    <HStack wrap={"wrap"} justifyContent={'space-evenly'}>
+                    <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
                         {coins.map((i) => (
                             <CoinCard
                                 id={i.id}
